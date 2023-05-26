@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Воспрос 1</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="../index.html">Содержание</a>
+    <a href="question1.html">Вопрос 1</a>
+    <a href="question2.html">Вопрос 2</a>
+    <a href="question3.html">Вопрос 3</a>
+    <a href="question4.html">Вопрос 4</a>
+    <a href="question5.html">Вопрос 5</a>
+    <a href="question6.html">Вопрос 6</a>
+    <a href="question7.html">Вопрос 7</a>
+    <a href="question8.html">Вопрос 8</a>
+    <a href="question9.html">Вопрос 9</a>
+    <a href="question10.html">Вопрос 10</a>
+    <a href="question11.html">Вопрос 11</a>
+    <a href="question12.html">Вопрос 12</a>
+    <a href="question13.html">Вопрос 13</a>
+    <a href="question14.html">Вопрос 14</a>
+    <a href="question15.html">Вопрос 15</a>
+    <a href="question16.html">Вопрос 16</a>
+    <a href="question17.html">Вопрос 17</a>
+    <a href="question18.html">Вопрос 18</a>
+    <a href="question19.html">Вопрос 19</a>
+    <a href="question20.html">Вопрос 20</a>
+</div>
+<div class="content">
+    <div class="header">
+        <h1>Вопрос 1</h1>
+    </div>
+    <div class="main">
+        <h4>Подсчет ссылок в C++. Схема на примере класса строк.
+            Умные указатели в стандартной библиотеке С++, виды и назначения.</h4>
+
+        <h5>Подсчет ссылок в C++</h5>
+        <p>
+            Подсчет ссылок в C++ используется для отслеживания количества ссылок на объект, чтобы знать, когда объект
+            можно безопасно удалить из памяти. Для этого можно использовать счетчик ссылок, который хранит количество
+            ссылок, ссылающихся на объект. Если этот счетчик равен нулю, то объект необходимо удалить[1].
+        </p>
+        <p>
+            Для реализации подсчета ссылок при создании собственного класса в C++, можно использовать умные указатели,
+            такие как `std::shared_ptr` или `std::unique_ptr`. Они автоматически управляют памятью и подсчитывают
+            количество ссылок на объект[2].
+
+        </p>
+        <h5>Схема на примере класса строк</h5>
+        <p>
+            Класс строк в C++ может быть реализован с помощью умных указателей. Например, можно использовать
+            `std::shared_ptr` для хранения строки и подсчета ссылок на нее. Когда создается новый объект строки, счетчик
+            ссылок устанавливается в 1. При каждом создании новой ссылки на объект, счетчик увеличивается на 1. Когда
+            ссылка на объект удаляется, счетчик уменьшается на 1. Если счетчик становится равным нулю, объект удаляется
+            из памяти[1].
+        </p>
+
+        <h5>Умные указатели в стандартной библиотеке С++</h5>
+        <p>
+            Умные указатели в C++ предназначены для управления динамически выделяемой памятью и гарантирования ее
+            освобождения. В стандартной библиотеке C++ есть несколько типов умных указателей, таких как
+            `std::unique_ptr`,
+            `std::shared_ptr` и `std::weak_ptr`. Они обеспечивают автоматическое управление памятью и предотвращают
+            утечки
+            памяти[3].
+        </p>
+        <ul>
+            <li>
+                `std::unique_ptr` - это умный указатель, владеющий динамически выделенным ресурсом. Он гарантирует, что
+                ресурс
+                будет удален, когда `std::unique_ptr` выходит из области видимости[2].
+            </li>
+            <li>
+                `std::shared_ptr` - это умный указатель, владеющий разделяемым динамически выделенным ресурсом.
+                Несколько
+                `std::shared_ptr` могут владеть одним и тем же ресурсом, и внутренний счетчик ведет их учет. Когда
+                счетчик
+                становится равным нулю, ресурс удаляется из памяти[4].
+            </li>
+            <li>
+                `std::weak_ptr` - это умный указатель, который не владеет ресурсом, но может получить доступ к нему
+                через
+                `std::shared_ptr`. Он используется для предотвращения циклических ссылок между объектами[3].
+            </li>
+        </ul>
+
+        <h5>Ссылки</h5>
+        <ol>
+            <li>[Подсчет ссылок в C++ - Stack Overflow на
+                русском](https://ru.stackoverflow.com/questions/833273/%D0%9F%D0%BE%D0%B4%D1%81%D1%87%D0%B5%D1%82-%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA-%D0%B2-c)
+            </li>
+            <li>
+                [Умные указатели в C++ - Библиотека программиста](https://proglib.io/p/umnye-ukazateli-v-c-2021-08-26)
+            </li>
+            <li>
+                [C++. Работа со строками. Класс string. Конструкторы класса. Функции assign(), append(), insert(),
+                replace(),
+                erase(), find(), rfind(), compare(), c_str(). Примеры |
+                BestProg](https://www.bestprog.net/ru/2018/04/26/working-with-strings-the-string-class-class-constructors-the-functions-assign-append-insert-replace-erase-find-rfind-compare-c_str-examples_ru/)
+            </li>
+            <li>
+                [Умные указатели – это ваш способ управления динамической памятью по умолчанию. std::unique_ptr – это ваш
+                умный указатель по умолчанию.](https://proglib.io/p/umnye-ukazateli-v-c-2021-08-26)
+            </li>
+            <li>
+                [Краткий справочник по умным указателям С++ - Блог Ильи
+                Житенёва](https://zhitenev.ru/kratkiy-spravochnik-po-umnym-ukazatelyam-cpp/)
+            </li>
+            <li>
+                [Подсчет ссылок (ATL) - Microsoft Learn](https://learn.microsoft.com/ru-ru/cpp/atl/reference-counting)
+            </li>
+            <li>
+                [Использование умных указателей в C++ в качестве параметров](https://dgrafov.blogspot.com/2016/04/c.html)
+            </li>
+            <li>
+                [Разработать класс String - C++ - Киберфорум](https://www.cyberforum.ru/cpp-beginners/thread2864864.html)
+            </li>
+            <li>
+                [Умные указатели в современном C++ с точки зрения новичка / Хабр -
+                Habr](https://habr.com/ru/companies/piter/articles/706866/)
+            </li>
+        </ol>
+    </div>
+</div>
+</body>
+</html>
