@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Вопрос 3</title>
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Вопрос 3</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 <div class="navbar">
-  <a href="../index.html">Содержание</a>
-  <a href="question1.html">Вопрос 1</a>
-  <a href="question2.html">Вопрос 2</a>
-  <a href="question3.html">Вопрос 3</a>
-  <a href="question4.html">Вопрос 4</a>
-  <a href="question5.html">Вопрос 5</a>
-  <a href="question4.html">Вопрос 6</a>
-  <a href="question5.html">Вопрос 7</a>
-  <a href="question6.html">Вопрос 8</a>
-  <a href="question9.html">Вопрос 9</a>
-  <a href="question10.html">Вопрос 10</a>
-  <a href="question11.html">Вопрос 11</a>
-  <a href="question12.html">Вопрос 12</a>
-  <a href="question13.html">Вопрос 13</a>
-  <a href="question14.html">Вопрос 14</a>
-  <a href="question15.html">Вопрос 15</a>
+    <a href="../index.html">Содержание</a>
+    <a href="question1.html">Вопрос 1</a>
+    <a href="question2.html">Вопрос 2</a>
+    <a href="question3.html">Вопрос 3</a>
+    <a href="question4.html">Вопрос 4</a>
+    <a href="question5.html">Вопрос 5</a>
+    <a href="question4.html">Вопрос 6</a>
+    <a href="question5.html">Вопрос 7</a>
+    <a href="question6.html">Вопрос 8</a>
+    <a href="question9.html">Вопрос 9</a>
+    <a href="question10.html">Вопрос 10</a>
+    <a href="question11.html">Вопрос 11</a>
+    <a href="question12.html">Вопрос 12</a>
+    <a href="question13.html">Вопрос 13</a>
+    <a href="question14.html">Вопрос 14</a>
+    <a href="question15.html">Вопрос 15</a>
 </div>
 <div class="content">
-  <div class="header">
-    <h1>Вопрос 3</h1>
-  </div>
-  <div class="main">
-    <h4>Алгоритм bitap</h4>
+    <div class="header">
+        <h1>Вопрос 3</h1>
+    </div>
+    <div class="main">
+        <h4>Алгоритм bitap</h4>
+        <p>Алгоритм bitap, также известный как алгоритм Употребления битовых операций или алгоритм Ахо-Корасик, является
+            эффективным методом для поиска подстроки в тексте. Он был разработан в 1985 году Раймондом Перла и Майклом
+            Хантем.</p>
 
-  </div>
+        <p>Целью алгоритма bitap является нахождение всех вхождений заданной подстроки (шаблона) в тексте. Алгоритм
+            использует понятие "маски", которая представляет собой битовую последовательность, где каждый бит
+            соответствует символу из шаблона. Маска позволяет эффективно искать совпадения шаблона в тексте с помощью
+            операций побитового сравнения.</p>
+
+        <p>Давайте рассмотрим пример поиска подстроки "apple" в тексте "I have an apple". Для этого мы должны создать
+            маску, где каждый бит соответствует символу из шаблона. Для "apple" маска будет выглядеть так: 11111. Затем
+            мы проходим по тексту, сравнивая каждый символ с маской с использованием побитовой операции AND.</p>
+
+        <p>Процесс поиска может быть разделен на несколько шагов:</p>
+
+        <ol>
+            <li>Инициализация маски и переменных. Для нашего примера: маска = 11111, состояние = 0.</li>
+            <li>Проход по тексту. Сравнение каждого символа текста с маской. Если символ совпадает с битом маски,
+                устанавливаем соответствующий бит в состоянии.
+            </li>
+            <li>Выполнение побитового сдвига вправо для состояния. Это позволяет учесть совпадение следующего символа
+                шаблона.
+            </li>
+            <li>Проверка последнего бита в состоянии. Если он установлен в 1, значит, найдено полное совпадение шаблона,
+                и мы можем сделать вывод о наличии подстроки в тексте.
+            </li>
+        </ol>
+
+        <p>В нашем примере, проходя по тексту "I have an apple", мы обнаружим совпадение шаблона "apple" в позиции 10.
+            Битовая маска будет постепенно заполняться совпадениями и в итоге состояние будет иметь значение 31 (11111 в
+            двоичной системе).</p>
+
+        <p>Алгоритм bitap обладает хорошей производительностью и применяется в различных областях, таких как поиск по
+            шаблонам, компиляция, автоматическое исправление ошибок и другие.</p>
+    </div>
 </div>
 </body>
 </html>

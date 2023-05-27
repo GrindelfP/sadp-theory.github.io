@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Вопрос 2</title>
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Вопрос 2</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 <div class="navbar">
-  <a href="../index.html">Содержание</a>
-  <a href="question1.html">Вопрос 1</a>
-  <a href="question2.html">Вопрос 2</a>
-  <a href="question3.html">Вопрос 3</a>
-  <a href="question4.html">Вопрос 4</a>
-  <a href="question5.html">Вопрос 5</a>
-  <a href="question4.html">Вопрос 6</a>
-  <a href="question5.html">Вопрос 7</a>
-  <a href="question6.html">Вопрос 8</a>
-  <a href="question9.html">Вопрос 9</a>
-  <a href="question10.html">Вопрос 10</a>
-  <a href="question11.html">Вопрос 11</a>
-  <a href="question12.html">Вопрос 12</a>
-  <a href="question13.html">Вопрос 13</a>
-  <a href="question14.html">Вопрос 14</a>
-  <a href="question15.html">Вопрос 15</a>
+    <a href="../index.html">Содержание</a>
+    <a href="question1.html">Вопрос 1</a>
+    <a href="question2.html">Вопрос 2</a>
+    <a href="question3.html">Вопрос 3</a>
+    <a href="question4.html">Вопрос 4</a>
+    <a href="question5.html">Вопрос 5</a>
+    <a href="question4.html">Вопрос 6</a>
+    <a href="question5.html">Вопрос 7</a>
+    <a href="question6.html">Вопрос 8</a>
+    <a href="question9.html">Вопрос 9</a>
+    <a href="question10.html">Вопрос 10</a>
+    <a href="question11.html">Вопрос 11</a>
+    <a href="question12.html">Вопрос 12</a>
+    <a href="question13.html">Вопрос 13</a>
+    <a href="question14.html">Вопрос 14</a>
+    <a href="question15.html">Вопрос 15</a>
 </div>
 <div class="content">
-  <div class="header">
-    <h1>Вопрос 2</h1>
-  </div>
-  <div class="main">
-    <h4>Алгоритм Ukkonen’а</h4>
+    <div class="header">
+        <h1>Вопрос 2</h1>
+    </div>
+    <div class="main">
+        <h4>Алгоритм Укконена (заменить пример)</h4>
+        <p>Алгоритм Укконена - это эффективный алгоритм для построения суффиксного дерева строки. Он был разработан
+            Эском Укконеном в 1995 году и представляет собой один из наиболее используемых методов для обработки и
+            анализа строковых данных.</p>
 
-  </div>
+        <p>Суффиксное дерево представляет собой структуру данных, которая хранит все суффиксы исходной строки. Оно
+            позволяет эффективно решать множество задач, таких как поиск подстроки, наибольшей общей подстроки, сжатие
+            данных и другие операции с текстом.</p>
+
+        <p>Алгоритм Укконена использует идею инкрементального построения суффиксного дерева. Он построен на основе
+            дерева, где каждое ребро представляет суффикс строки, а каждая вершина соответствует префиксу строки.
+            Алгоритм пошагово добавляет символы в исходную строку и обновляет суффиксное дерево, поддерживая его
+            структуру в компактном и эффективном виде.</p>
+
+        <p>Давайте рассмотрим пример для строки "banana". На первой итерации алгоритма мы добавляем первый символ "b" и
+            строим корень дерева. На второй итерации добавляем символ "a" и соединяем его с корнем. На третьей итерации
+            добавляем символ "n" и создаем новую ветвь. Затем мы продолжаем этот процесс для оставшихся символов "a",
+            "n" и "a". В результате получаем следующее суффиксное дерево:</p>
+
+        <pre>
+         root
+          |
+          b
+          |
+          a
+        / | \
+       n  n  a
+        |  |
+        a  a
+  </pre>
+
+        <p>Таким образом, алгоритм Укконена построил суффиксное дерево для строки "banana". Это дерево может быть
+            использовано для эффективного решения различных задач, связанных с обработкой этой строки.</p>
+
+        <p>Алгоритм Укконена является мощным инструментом для работы с суффиксными деревьями и находит применение во
+            многих областях, таких как обработка текста, геномика, компиляция и другие.</p>
+
+    </div>
 </div>
 </body>
 </html>
